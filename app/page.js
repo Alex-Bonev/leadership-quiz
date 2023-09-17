@@ -16,7 +16,7 @@ export default function Home() {
   const greenWords = ["Analytical", "Organized", "Methodical", "Meticulous", "Thoughtful", "Deliberate", "Detail-Oriented", "Practical", "Strategic", "Precise", "Systematic", "Realistic"];
 
   return (
-    <main className={`w-screen h-screen ${question < 12 ? "overflow-hidden" : ""}`}>
+    <main className={`w-screen h-screen`}>
       <div className="w-[90%] mx-auto">
         <div className="flex-col">
           <div className="grid place-items-center text-4xl pt-12 pb-2 font-bold">Leadership Styles Quiz</div>
