@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   const [selected, setSelected] = useState(0);
-  const [question, setQuestion] = useState(8);
+  const [question, setQuestion] = useState(0);
   const [red, setRed] = useState(0);
   const [yellow, setYellow] = useState(0);
   const [blue, setBlue] = useState(0);
