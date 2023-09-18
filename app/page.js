@@ -16,16 +16,16 @@ export default function Home() {
   const greenWords = ["Analytical", "Organized", "Methodical", "Meticulous", "Thoughtful", "Deliberate", "Detail-Oriented", "Practical", "Strategic", "Precise", "Systematic", "Realistic"];
 
   return (
-    <main className={`w-screen h-screen`}>
+    <main className={`w-full h-full`}>
       <div className="w-[90%] mx-auto">
         <div className="flex-col">
           <div className="grid place-items-center text-4xl pt-12 pb-2 font-bold">Leadership Styles Quiz</div>
           <div className="grid place-items-center text-2xl pb-2 font-bold">A short quiz developed by Alexander Bonev</div>
-          <div className="text-neutral-600 mb-6 pb-6 border-b-2 border-neutral-600">Instructions: Select whichever of the four traits best describes how you behave. Do not focus on what you wish you were or would like to be. Your first impression is usually the best; don't overthink your choices!</div>
-          <div className={`${question < 12 ? "flex-col space-y-6" : "scale-0"}`}>
+          <div className="text-neutral-600 mb-6 pb-6 text-[0.9rem] border-b-2 border-neutral-600">Instructions: Select whichever of the four traits best describes how you behave. Do not focus on what you wish you were or would like to be. Your first impression is usually the best; don't overthink your choices!</div>
+          <div className={`${question < 12 ? "flex-col space-y-6" : "scale-0 h-20"}`}>
             <div
               onClick={() => setSelected(1)}
-              className={`border-2 border-red-500 w-full rounded-sm text-center transition-all duration-200 ${selected === 1 ? "bg-red-200" : ""}`}
+              className={`border-2 border-red-500 w-full rounded-sm text-center py-2 transition-all duration-200 bg-opacity-10 ${selected === 1 ? "bg-black" : ""}`}
             >
               {redWords[question]}
             </div>
@@ -33,21 +33,21 @@ export default function Home() {
             <div
               onClick={() => setSelected(2)}
               
-              className={`border-2 border-amber-500 w-full rounded-sm text-center transition-all duration-200 ${selected === 2 ? "bg-amber-200" : ""}`}
+              className={`border-2 border-amber-500 w-full rounded-sm text-center py-2 transition-all duration-200 bg-opacity-10 ${selected === 2 ? "bg-black" : ""}`}
             >
               {yellowWords[question]}
             </div>
             
             <div
               onClick={() => setSelected(3)}
-              className={`border-2 border-blue-500 w-full rounded-sm text-center transition-all duration-200 ${selected === 3 ? "bg-blue-200" : ""}`}
+              className={`border-2 border-blue-500 w-full rounded-sm text-center py-2 transition-all duration-200 bg-opacity-10 ${selected === 3 ? "bg-black" : ""}`}
             >
               {blueWords[question]}
             </div>
 
             <div
               onClick={() => setSelected(4)}
-              className={`border-2 border-green-500 w-full rounded-sm text-center transition-all duration-200 ${selected === 4 ? "bg-green-200" : ""}`}
+              className={`border-2 border-green-500 w-full rounded-sm text-center py-2 transition-all duration-200 bg-opacity-10 ${selected === 4 ? "bg-black" : ""}`}
             >
               {greenWords[question]}
             </div>
@@ -72,12 +72,12 @@ export default function Home() {
               }
               console.log(question)
               }}
-            className="bg-neutral-800 rounded-sm text-white text-md text-center mt-10">
+            className="bg-neutral-800 rounded-sm text-white text-md text-center">
               Next
             </div>
           </div>
           
-          <div className={`${question === 12 ? "scale-1" : "scale-0"} -mt-12`}>
+          <div className={`${question === 12 ? "scale-1" : "scale-0 h-0"} -mt-12`}>
             <div className="text-4xl font-bold">Totals:</div>
             <div className="flex-col space-y-2">
               <div className="text-lg pl-4 mt-2 text-red-700">Red: {red}</div>
